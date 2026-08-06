@@ -1,2 +1,2 @@
 # AutoDock-AutoDockVina-DockIt
-The comparative study of interactive and automated molecular docking
+This repository contains data and scripts supporting the manuscript
