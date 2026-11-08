@@ -1,0 +1,16 @@
+parm step3_input.parm7
+trajin reduced.nc
+reference prod.xtc
+center origin :1-198
+image origin center
+strip :WAT
+rms reference mass :1-198@CA,C,N out RMSD.out
+matrix covar name matrixdat @CA out covmat-ca.dat
+analyze matrix matrixdat out evecs-ca.dat vecs 198
+analyze matrix matrixdat name evecs-ca vecs 198
+analyze modes fluct out analyzemodesflu.dat stack evecs-ca beg 1 end 198
+analyze modes displ out analyzemodesdis.dat stack evecs-ca beg 1 end 198
+run
+
+projection modes evecs-ca.dat out pca1.dat beg 1 end 3 @CA
+run

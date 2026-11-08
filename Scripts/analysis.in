@@ -1,0 +1,25 @@
+parm step3_input.parm7
+trajin prod.xtc
+
+unwrap
+center :1-196 mass origin
+image origin center
+
+# Выравнивание по белку
+rms first :1-196@CA
+
+# RMSD белка
+rms protein_rmsd :1-196@CA out rmsd_protein.dat
+
+# RMSD лиганда 
+rms ligand_rmsd :20T out rmsd_ligand.dat
+
+# RMSF белка
+atomicfluct :1-196@CA byres out rmsf_protein.dat
+
+# RMSF лиганда
+atomicfluct :20T out rmsf_ligand.dat
+
+radgyr :1-196 out rg_protein.dat
+
+run
