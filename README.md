@@ -1,5 +1,6 @@
 # AutoDock-AutoDockVina-DockIt
 This repository contains data and scripts supporting the manuscript.
+DOI: 10.5281/zenodo.24114601
 # Contents
 - 'DatabasePDBs' contains PDB files for complexes, proteins and ligands;
 - 'DockIt_Inputs' contains input files for interactive docking;
